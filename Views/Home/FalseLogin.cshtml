@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h4>Use a local account to log in.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger">@ViewData["Error"]</div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input id="Email" name="Email" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input id="Password" name="Password" type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="RememberMe">
+                            Remember me? 
+                            <input id="RememberMe" name="RememberMe" type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+                <!-- Pages here go nowhere. For a real site, you may want to create these pages as honeypots as well. -->
+                <div class="form-group">
+                    <p>
+                        <a id="forgot-password" href="ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a href="Register">Register as a new user</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

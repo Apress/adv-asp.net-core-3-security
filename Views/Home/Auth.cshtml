@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Authorization";
+}
+
+<div>
+    <h1 class="display-4">Authorization</h1>
+    <p>
+        <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Administrator">Administrator Only</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="RequireAuthorship">Is Author (Policy)</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="MinimumAccessLevelManager">Is At Least Manager</a></li>
+        </ul>
+    </p>
+</div>

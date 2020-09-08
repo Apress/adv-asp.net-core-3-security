@@ -1,0 +1,18 @@
+﻿@page
+@model Advanced.Security.V3.Pages.CSPNonceTestModel
+
+@{
+    ViewData["Title"] = "CSP Nonce Test";
+}
+
+<h1>CSP Nonce Test</h1>
+
+<p>You should see one alert for this page</p>
+
+<script nonce="@ViewData["Nonce"]">
+    alert("Nonce alert called");
+</script>
+
+<script>
+    alert("Script with no nonce called");
+</script>
